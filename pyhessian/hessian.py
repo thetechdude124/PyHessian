@@ -259,7 +259,7 @@ class hessian():
                     T[i + 1, i] = beta_list[i]
                     T[i, i + 1] = beta_list[i]
             a_, b_ = torch.linalg.eig(T)
-            print("A_SHAPE:", a_.shape, " B_SHAPE:", b_.shape())
+            print("A_SHAPE:", a_.shape, " B_SHAPE:", b_.shape)
             eigen_list = a_
             weight_list = b_**2
             eigen_list_full.append(list(eigen_list.cpu().numpy()))
